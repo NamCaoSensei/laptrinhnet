@@ -1,4 +1,4 @@
-﻿namespace _4_1TaoFormDangNhap
+﻿namespace bai4_2
 {
     partial class Form1
     {
@@ -28,119 +28,216 @@
         /// </summary>
         private void InitializeComponent()
         {
-            components = new System.ComponentModel.Container();
+            mtxtPhone = new MaskedTextBox();
+            dtpBirthDate = new DateTimePicker();
+            cboCourse = new ComboBox();
+            rdoMale = new RadioButton();
+            rdoFemale = new RadioButton();
+            chkEnglish = new CheckBox();
+            chkIT = new CheckBox();
+            txtName = new TextBox();
+            btnRegister = new Button();
             label1 = new Label();
             label2 = new Label();
-            txtUsername = new TextBox();
-            txtPassword = new TextBox();
-            chkShowPassword = new CheckBox();
-            btnLogin = new Button();
-            btnExit = new Button();
-            errorProvider1 = new ErrorProvider(components);
-            ((System.ComponentModel.ISupportInitialize)errorProvider1).BeginInit();
+            label3 = new Label();
+            label4 = new Label();
+            label5 = new Label();
+            label6 = new Label();
             SuspendLayout();
+            // 
+            // mtxtPhone
+            // 
+            mtxtPhone.Location = new Point(168, 74);
+            mtxtPhone.Mask = "(000) 000-0000";
+            mtxtPhone.Name = "mtxtPhone";
+            mtxtPhone.Size = new Size(125, 27);
+            mtxtPhone.TabIndex = 0;
+            mtxtPhone.MaskInputRejected += maskedTextBox1_MaskInputRejected;
+            // 
+            // dtpBirthDate
+            // 
+            dtpBirthDate.CustomFormat = "dd/MM/yyyy";
+            dtpBirthDate.Format = DateTimePickerFormat.Custom;
+            dtpBirthDate.Location = new Point(168, 112);
+            dtpBirthDate.Name = "dtpBirthDate";
+            dtpBirthDate.Size = new Size(250, 27);
+            dtpBirthDate.TabIndex = 1;
+            dtpBirthDate.ValueChanged += dateTimePicker1_ValueChanged;
+            // 
+            // cboCourse
+            // 
+            cboCourse.FormattingEnabled = true;
+            cboCourse.Location = new Point(168, 237);
+            cboCourse.Name = "cboCourse";
+            cboCourse.Size = new Size(151, 28);
+            cboCourse.TabIndex = 2;
+            cboCourse.SelectedIndexChanged += cboCourse_SelectedIndexChanged;
+            // 
+            // rdoMale
+            // 
+            rdoMale.AutoSize = true;
+            rdoMale.Location = new Point(168, 159);
+            rdoMale.Name = "rdoMale";
+            rdoMale.Size = new Size(62, 24);
+            rdoMale.TabIndex = 3;
+            rdoMale.TabStop = true;
+            rdoMale.Text = "Nam";
+            rdoMale.UseVisualStyleBackColor = true;
+            rdoMale.CheckedChanged += radioButton1_CheckedChanged;
+            // 
+            // rdoFemale
+            // 
+            rdoFemale.AutoSize = true;
+            rdoFemale.Location = new Point(243, 159);
+            rdoFemale.Name = "rdoFemale";
+            rdoFemale.Size = new Size(50, 24);
+            rdoFemale.TabIndex = 4;
+            rdoFemale.TabStop = true;
+            rdoFemale.Text = "Nữ";
+            rdoFemale.UseVisualStyleBackColor = true;
+            rdoFemale.CheckedChanged += rdoFemale_CheckedChanged;
+            // 
+            // chkEnglish
+            // 
+            chkEnglish.AutoSize = true;
+            chkEnglish.Location = new Point(168, 198);
+            chkEnglish.Name = "chkEnglish";
+            chkEnglish.Size = new Size(98, 24);
+            chkEnglish.TabIndex = 5;
+            chkEnglish.Text = "Tiếng Anh";
+            chkEnglish.UseVisualStyleBackColor = true;
+            chkEnglish.CheckedChanged += chkEnglish_CheckedChanged;
+            // 
+            // chkIT
+            // 
+            chkIT.AutoSize = true;
+            chkIT.Location = new Point(272, 198);
+            chkIT.Name = "chkIT";
+            chkIT.Size = new Size(82, 24);
+            chkIT.TabIndex = 6;
+            chkIT.Text = "Tin Học";
+            chkIT.UseVisualStyleBackColor = true;
+            chkIT.CheckedChanged += chkIT_CheckedChanged;
+            // 
+            // txtName
+            // 
+            txtName.Location = new Point(168, 31);
+            txtName.Name = "txtName";
+            txtName.Size = new Size(125, 27);
+            txtName.TabIndex = 7;
+            txtName.TextChanged += txtName_TextChanged;
+            // 
+            // btnRegister
+            // 
+            btnRegister.Location = new Point(224, 338);
+            btnRegister.Name = "btnRegister";
+            btnRegister.Size = new Size(235, 47);
+            btnRegister.TabIndex = 8;
+            btnRegister.Text = "Đăng Ký";
+            btnRegister.UseVisualStyleBackColor = true;
+            btnRegister.Click += btnRegister_Click;
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(32, 42);
+            label1.Location = new Point(86, 34);
             label1.Name = "label1";
-            label1.Size = new Size(107, 20);
-            label1.TabIndex = 0;
-            label1.Text = "Tên đăng nhập";
+            label1.Size = new Size(76, 20);
+            label1.TabIndex = 9;
+            label1.Text = "Họ Và Tên";
             label1.Click += label1_Click;
             // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(32, 91);
+            label2.Location = new Point(60, 77);
             label2.Name = "label2";
-            label2.Size = new Size(70, 20);
-            label2.TabIndex = 1;
-            label2.Text = "Mật khẩu";
+            label2.Size = new Size(102, 20);
+            label2.TabIndex = 10;
+            label2.Text = "Số Điện Thoại";
             label2.Click += label2_Click;
             // 
-            // txtUsername
+            // label3
             // 
-            txtUsername.Location = new Point(145, 35);
-            txtUsername.Name = "txtUsername";
-            txtUsername.Size = new Size(125, 27);
-            txtUsername.TabIndex = 2;
-            txtUsername.TextChanged += textBox1_TextChanged;
+            label3.AutoSize = true;
+            label3.Location = new Point(86, 117);
+            label3.Name = "label3";
+            label3.Size = new Size(76, 20);
+            label3.TabIndex = 11;
+            label3.Text = "Ngày Sinh";
+            label3.Click += label3_Click;
             // 
-            // txtPassword
+            // label4
             // 
-            txtPassword.Location = new Point(145, 84);
-            txtPassword.Name = "txtPassword";
-            txtPassword.Size = new Size(125, 27);
-            txtPassword.TabIndex = 3;
-            txtPassword.UseSystemPasswordChar = true;
+            label4.AutoSize = true;
+            label4.Location = new Point(94, 161);
+            label4.Name = "label4";
+            label4.Size = new Size(68, 20);
+            label4.TabIndex = 12;
+            label4.Text = "Giới Tính";
+            label4.Click += label4_Click;
             // 
-            // chkShowPassword
+            // label5
             // 
-            chkShowPassword.AutoSize = true;
-            chkShowPassword.Location = new Point(145, 117);
-            chkShowPassword.Name = "chkShowPassword";
-            chkShowPassword.Size = new Size(127, 24);
-            chkShowPassword.TabIndex = 4;
-            chkShowPassword.Text = "Hiện mật khẩu";
-            chkShowPassword.UseVisualStyleBackColor = true;
-            chkShowPassword.CheckedChanged += checkBox1_CheckedChanged;
+            label5.AutoSize = true;
+            label5.Location = new Point(14, 240);
+            label5.Name = "label5";
+            label5.Size = new Size(148, 20);
+            label5.TabIndex = 13;
+            label5.Text = "Danh Sách Khóa Học";
             // 
-            // btnLogin
+            // label6
             // 
-            btnLogin.Location = new Point(255, 332);
-            btnLogin.Name = "btnLogin";
-            btnLogin.Size = new Size(94, 29);
-            btnLogin.TabIndex = 5;
-            btnLogin.Text = "Đăng nhập";
-            btnLogin.UseVisualStyleBackColor = true;
-            btnLogin.Click += btnLogin_Click;
-            // 
-            // btnExit
-            // 
-            btnExit.Location = new Point(125, 332);
-            btnExit.Name = "btnExit";
-            btnExit.Size = new Size(94, 29);
-            btnExit.TabIndex = 6;
-            btnExit.Text = "Thoát";
-            btnExit.UseVisualStyleBackColor = true;
-            btnExit.Click += btnExit_Click;
-            // 
-            // errorProvider1
-            // 
-            errorProvider1.ContainerControl = this;
+            label6.AutoSize = true;
+            label6.Location = new Point(91, 202);
+            label6.Name = "label6";
+            label6.Size = new Size(70, 20);
+            label6.TabIndex = 14;
+            label6.Text = "Môn Học";
+            label6.Click += label6_Click;
             // 
             // Form1
             // 
-            AcceptButton = btnLogin;
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            CancelButton = btnExit;
-            ClientSize = new Size(476, 375);
-            Controls.Add(btnExit);
-            Controls.Add(btnLogin);
-            Controls.Add(chkShowPassword);
-            Controls.Add(txtPassword);
-            Controls.Add(txtUsername);
+            ClientSize = new Size(694, 397);
+            Controls.Add(label6);
+            Controls.Add(label5);
+            Controls.Add(label4);
+            Controls.Add(label3);
             Controls.Add(label2);
             Controls.Add(label1);
+            Controls.Add(btnRegister);
+            Controls.Add(txtName);
+            Controls.Add(chkIT);
+            Controls.Add(chkEnglish);
+            Controls.Add(rdoFemale);
+            Controls.Add(rdoMale);
+            Controls.Add(cboCourse);
+            Controls.Add(dtpBirthDate);
+            Controls.Add(mtxtPhone);
             Name = "Form1";
-            Text = "Form đăng nhập";
-            ((System.ComponentModel.ISupportInitialize)errorProvider1).EndInit();
+            Text = "Form1";
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
 
+        private MaskedTextBox mtxtPhone;
+        private DateTimePicker dtpBirthDate;
+        private ComboBox cboCourse;
+        private RadioButton rdoMale;
+        private RadioButton rdoFemale;
+        private CheckBox chkEnglish;
+        private CheckBox chkIT;
+        private TextBox txtName;
+        private Button btnRegister;
         private Label label1;
         private Label label2;
-        private TextBox txtUsername;
-        private TextBox txtPassword;
-        private CheckBox chkShowPassword;
-        private Button btnLogin;
-        private Button btnExit;
-        private ErrorProvider errorProvider1;
+        private Label label3;
+        private Label label4;
+        private Label label5;
+        private Label label6;
     }
 }
